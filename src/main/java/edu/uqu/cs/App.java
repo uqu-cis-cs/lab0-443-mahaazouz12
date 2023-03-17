@@ -1,4 +1,7 @@
 package edu.uqu.cs;
+
+import java.util.Scanner;
+
 /*
  * Lab 0 
  * CS 1312
@@ -42,11 +45,113 @@ public class App{
 * Output: 2255464228626
 *
 */
- 
+
+
+  public static void twisters(){
+
+    for (int i= 1; i<=110; i++){
+
+      if (i % 2 == 0){
+        System.out.print("Tweetle");
+      }
+
+        if (i % 4 == 0){
+          System.out.print("Beetle");
+      }
+
+            if (i % 6 == 0){
+             System.out.print("Poodle");
+      }
+              else {
+                System.out.print(" " + i + " ");
+              }
+  }
+   
+  }
+       public static void phoneKeypad(String str){
+
+        String result = "";
+
+         for (char ch: str.toUpperCase().toCharArray()){
+
+            switch(ch){
+
+                case 'A' :
+                case 'B' :
+                case 'C' :
+                
+                result += "2";
+                 break;
+
+                 case 'D' :
+                 case 'E' :
+                 case 'F' :
+                  
+                result += "3";
+                 break;
+
+                 case 'G' :
+                 case 'H' :
+                 case 'I' :
+
+                 result += "4";
+                 break;
+
+                 case 'J' :
+                 case 'K' :
+                 case 'L' :
+
+                 result += "5";
+                 break;
+
+                 case 'M' :
+                 case 'N' :
+                 case 'O' :
+
+                 result += "6";
+                 break; 
+
+                 case 'P' :
+                 case 'Q' :
+                 case 'R' :
+                 case 'S' :
+
+                 result += "7";
+                 break;
+
+                 case 'T' :
+                 case 'U' :
+                 case 'V' :
+
+                 result += "8";
+                 break;
+
+                 case 'W' :
+                 case 'x' :
+                 case 'Y' :
+                 case 'Z' :
+
+                 result += "9";
+                 break;
+            }    
+
+
+         }
+                 System.out.println(result);
+       }
+       
+
     public static void main(String [] args) {
         
-
         /* Write your code here */
+
+        twisters();
+        Scanner input = new Scanner(System.in);
+       
+        System.out.println("Enter a string");
+         
+        phoneKeypad(input.nextLine());
+
      
        //call method twisters()
        //prompt user to enter a string 
